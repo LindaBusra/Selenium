@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class AmazonSearch_version3 extends TestBase {
+public class AmazonSearch_version2 extends TestBase {
 
     /*Create a new class: AmazonSearch
     //TC01_As user I want to know how many item are there on amazon in the first page after I search "porcelain teapot"?

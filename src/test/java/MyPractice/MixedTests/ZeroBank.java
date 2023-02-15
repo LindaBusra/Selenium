@@ -29,7 +29,7 @@ public class ZeroBank extends TestBase {
         User goes Online Statements and goes year 2009 records
         User downloads first record
         Set the path and verify to downloaded file is exists
-        Finally take a screenshot
+
      */
 
 

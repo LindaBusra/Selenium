@@ -33,7 +33,7 @@ This will make the test execution time longer than needed.
 Selenium wait. Wait UP TO the given time.
 Local wait. We will apply the wait on to the specific elements
 We must create a WebDriverWait object
-    This sometime handles wait isse BETTER THAN IMPLICIT WAIT
+    This sometime handles wait issue BETTER THAN IMPLICIT WAIT
     Element is not visible
     Element no clickable
     Text not displayed

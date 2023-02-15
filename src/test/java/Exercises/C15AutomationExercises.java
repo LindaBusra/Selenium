@@ -1,5 +1,6 @@
 package Exercises;
 
+import com.github.javafaker.Faker;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -52,8 +53,9 @@ public class C15AutomationExercises extends TestBase {
         System.out.println("2");
 
         //5. Fill all details in Signup and create account
-        driver.findElement(By.xpath("//input[@data-qa='signup-name']")).sendKeys("ali");
-        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys("aliveli@gmail.com");
+        Faker faker = new Faker();
+        driver.findElement(By.xpath("//input[@data-qa='signup-name']")).sendKeys(faker.name().firstName());
+        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys(faker.internet().emailAddress());
         driver.findElement(By.xpath("//button[@data-qa='signup-button']")).click();
         System.out.println("3");
 
@@ -105,7 +107,7 @@ public class C15AutomationExercises extends TestBase {
         WebElement accountCreated = driver.findElement(By.xpath("//*[text()='Account Created!']"));
         Assert.assertTrue(accountCreated.isDisplayed());
         System.out.println("4");
-        driver.findElement(By.xpath("//span[text()='Close']")).click();
+//        driver.findElement(By.xpath("//span[.='Close']")).click();
 
         driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();    //popUp
 

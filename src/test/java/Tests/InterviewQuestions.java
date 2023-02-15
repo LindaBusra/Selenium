@@ -23,7 +23,7 @@ public class InterviewQuestions {
     I already have implicit wait in my Driver class, but I prefer explicit wait when I need to use an expected
     condition such as element is not visible.
 
-    How do you resolve synronization issue?
+    How do you resolve synchronization issue?
     I use implicit or explicit wait. In my driver class, I already have implicit wait, that handles most of the wait
     issues, but when it is not enough than I use explicit wait.
      */

@@ -238,7 +238,8 @@ public class T00_Interview {
             an element before throwing "NOSUCHELEMENT EXCEPTION"
             *LOGIC:As by default selenium tries to find elements immediately without any wait
            ,so it is good to use implicit wait.This wait applied to ALL ELEMENTS of the current
-           driver instance
+           driver instance.
+
            EXplicit wait : is a wait which applied to a particular webelement until the EXPECTED
            CONDITION specified is met.
            ****SUMMARY: implicit wait is simply, if condition is met before the timeout,
