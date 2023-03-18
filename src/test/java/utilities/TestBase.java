@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -22,13 +23,19 @@ import java.util.function.Function;
 
 public abstract class TestBase {
 
-    protected static  WebDriver driver;
+     protected static  WebDriver driver;
 
     @Before
     public void setUp(){
 
+        ChromeOptions ops = new ChromeOptions();
+        ops.addArguments("--remote-allow-origins=*");
+
+        //WebDriver driver = new ChromeDriver(ops) ;
+
+
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+       driver = new ChromeDriver(ops);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.manage().window().maximize();

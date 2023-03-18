@@ -1,5 +1,6 @@
 package Tests;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -22,6 +23,7 @@ public class Day01_BasicNavigations {
 
         //Step 1: Set up
         System.setProperty("webdriver.chrome.driver", "./src/resources/drivers/chromedriver.exe");
+
 
         //Step 2: Create
         WebDriver driver = new ChromeDriver();
@@ -51,5 +53,7 @@ public class Day01_BasicNavigations {
 
         //driver.quit()-->we may have multiple windows. with quit all of those browsers closed.
         driver.close();     //it closes only active/last window.
+
+
     }
 }

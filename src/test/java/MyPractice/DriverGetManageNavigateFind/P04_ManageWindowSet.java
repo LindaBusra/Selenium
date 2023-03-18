@@ -27,7 +27,7 @@ public class P04_ManageWindowSet {
 
 
         driver.manage().window().setPosition(new Point(0,0));                   //x,y
-        driver.manage().window().setSize(new Dimension(300,500));       //width, height
+        driver.manage().window().setSize(new Dimension(400,493));       //width, height
 
         int xPos = driver.manage().window().getPosition().getX();
         int yPos = driver.manage().window().getPosition().getY();
@@ -43,6 +43,8 @@ public class P04_ManageWindowSet {
 
 
         //Test failed !!!
+        //Convert webdriver to TakeScreenshot
+        //File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 
 

@@ -19,6 +19,10 @@ public class Day08_Actions2 extends TestBase {
     Then verify the page title contains “Your Account”
      */
 
+    //cooook tesekkur ederim...
+   // cok sagolunnn
+
+
     @Test
     public void contextClickMethod(){
 

@@ -11,6 +11,11 @@ As Tester What Do you do?
 3-Run smoke tests and check results. Communicate with the team if any test fails.
 4-Run regression tests.
 
+        ssn alma:
+        Faker faker = new Faker();
+        System.out.println(faker.idNumber().ssnValid());
+
+
 
 
 TestBase

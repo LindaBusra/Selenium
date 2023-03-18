@@ -2,6 +2,7 @@ package Tests;
 
 import org.junit.Test;
 import utilities.TestBase;
+import utilities.TestBase;
 
 public class Day07_TestBaseDemo extends TestBase {
 
