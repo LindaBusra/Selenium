@@ -32,6 +32,7 @@ public class C07AutomationExercises {
     @Before
     public void setUp(){
 
+        System.setProperty("webdriver.http.factory", "jdk-http-client");  //after updating i chrome I added it
         //1. Launch browser
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();

@@ -45,6 +45,7 @@ Test Case 14: Place Order: Register while Checkout
     public void test01() throws AWTException {
 
 
+
         //2. Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
 

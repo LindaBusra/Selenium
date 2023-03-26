@@ -1,7 +1,9 @@
 package Tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Day02_UrlVerification {
 
@@ -10,8 +12,12 @@ public class Day02_UrlVerification {
 
         System.setProperty("webdriver.chrome.driver", "./src/resources/drivers/chromedriver.exe");
 
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options=new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriver driver = new ChromeDriver(options);
+
 
         driver.get("https://techproeducation.com/");
 

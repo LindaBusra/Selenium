@@ -1,8 +1,10 @@
 package Tests;
 
 import com.github.javafaker.Faker;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Day01_BasicNavigations {
     /*
@@ -26,7 +28,10 @@ public class Day01_BasicNavigations {
 
 
         //Step 2: Create
-        WebDriver driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options=new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriver driver = new ChromeDriver(options);
 
         //Step 3: Write test scripts
         //Maximize the window
