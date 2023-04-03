@@ -1,6 +1,7 @@
 package Tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,6 +20,9 @@ public class Day02_GetPageSource {
     Test if amazon contains “Registry” on the homepage
     Create a new class : GetPageSource
      */
+
+        //Step 1: Set up
+        System.setProperty("webdriver.chrome.driver", "./src/resources/drivers/chromedriver.exe");
 
 
         WebDriverManager.chromedriver().setup();
@@ -43,6 +47,11 @@ public class Day02_GetPageSource {
             System.out.println("Page Source: " + pageSource);
             System.out.println("Expected word: " + expectedWord);
         }
+
+
+        //or
+//        Assert.assertTrue(pageSource.contains(expectedWord));
+//        System.out.println("Test passed");
 
 
         driver.quit();
