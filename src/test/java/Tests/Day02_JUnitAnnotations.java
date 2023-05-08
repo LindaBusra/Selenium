@@ -16,7 +16,7 @@ public class Day02_JUnitAnnotations {
     * For example, driver quit, report generation
     *
     * @BeforeClass : It runs before each CLASS only ONCE. This methods must be static. Otherwise you get Runtime exception
-    * @AfterClass :  It runs after each CLASS only ONCE. Otherwise you get Runtime exception
+    * @AfterClass :  It runs after each CLASS only ONCE. This methods must be static. Otherwise you get Runtime exception
     *
     * @Ignore :  It used to skip/ignore a test case.
      */

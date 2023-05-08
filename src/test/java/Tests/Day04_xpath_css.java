@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -17,7 +18,10 @@ public class Day04_xpath_css {
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver= new ChromeDriver(options);
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -74,7 +78,7 @@ public class Day04_xpath_css {
             -Relative xpath:we don't start from parent and go to child by one by. We go straight to the element.
             -Relative xpath use //
             -Relative xpath is very reliable. It does not easy brake, because absolute xpath does not dependent on other element
-            -I use absolute xpath in my framework when to locate the elements.
+            -I use relative xpath in my framework when to locate the elements.
 
 
      * What is the difference between xpath and css selector?

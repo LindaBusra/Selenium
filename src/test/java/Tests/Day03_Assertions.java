@@ -31,13 +31,20 @@ public class Day03_Assertions {
         }
 
         Assert.assertEquals("java","java");
-        Assert.assertEquals(true, true);
+        Assert.assertEquals(false, false);
+
+       // Assert.assertEquals(true, false);   -->it stops here --> java.lang.AssertionError:
+
         Assert.assertEquals("java".contains("j"), true);        //pass
 
 
         Assert.assertTrue("java".contains("j"));
 
-        Assert.assertFalse("java".contains("j)"));      //pass
+        Assert.assertFalse("java".contains("k"));      //pass
+        Assert.assertFalse("java".contains("j"));      //fail
+
+
+
 
         //Test execution stops if the  assertion is fail. This is called HARD ASSERTION
         //Test execution continues even  if test verification fails.  Verification means like if statement.

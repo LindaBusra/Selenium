@@ -44,7 +44,7 @@ public class Day03_Assertions02 {
 
         String name = "John";
         assertTrue(name.contains("J"));
-        assertFalse(name.contains("A"));
+        assertFalse(name.contains("k"));
 
         /*
 

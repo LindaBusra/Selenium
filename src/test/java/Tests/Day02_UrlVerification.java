@@ -1,6 +1,7 @@
 package Tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,6 +30,10 @@ public class Day02_UrlVerification {
         String expectedUrl = "https://techproeducation.com/";
 
 
+        Assert.assertEquals(actualUrl , expectedUrl);
+
+
+        //or
         if(expectedUrl.equals(actualUrl)) {
 
             System.out.println("Test passed");
@@ -49,7 +54,7 @@ public class Day02_UrlVerification {
         -If all good, then I start complete  my automation script.
         -If I find a bug/defect, then I talk to dev. Dev fixes the issue, then I retest. If all is good
         then start my automation
-        -When then automation is complete, I prepare the report for then user story. In fact, My automation script
+        -When the automation is complete, I prepare the report for then user story. In fact, My automation script
         generates html reports for us. I upload those reports to the JIRA.
         -For my manual test cases, I manually take screenshots and prepare reports and attach them to the JIRA.
 

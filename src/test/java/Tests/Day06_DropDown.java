@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
@@ -24,8 +25,8 @@ public class Day06_DropDown {
 //4.Create method printAllTest Print all dropdown value
 //5. Verify the dropdown has Option 2 text
 //6.Create method printFirstSelectedOptionTest Print first selected option
-//7.Find the size of the dropdown, Print "Expected Is Not Equal Actual" if there are not 3 elements in the dropdown.
-     */
+//7.Find the size of the dropdown, Print "Expected Is Not Equal Actual" if there are not 3 elements in the dropdown.         */
+
 
     WebDriver driver;
 
@@ -34,13 +35,20 @@ public class Day06_DropDown {
 
         // Create chrome driver by using @Before annotation and WebDriverManager
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        //Go to https://testcenter.techproeducation.com/index.php?page=dropdown
         driver.get("https://testcenter.techproeducation.com/index.php?page=dropdown ");
     }
 
 
+
+    //1.Create method selectByIndexTest and Select Option 1 using index
     @Test
     public void selectByIndexTest() {
 
@@ -54,16 +62,15 @@ public class Day06_DropDown {
         //Select any option using the select object
         options.selectByIndex(1);       //index starts at 0.
 
-        //Go to https://testcenter.techproeducation.com/index.php?page=dropdown
-//1.Create method selectByIndexTest and Select Option 1 using index
-
     }
 
 
+
+    //2.Create method selectByVisibleTextTest Select Option 2 by visible text
         @Test
         public void selectByVisibleTextTest(){
 
-            //2.Create method selectByVisibleTextTest Select Option 2 by visible text
+
             WebElement dropdown = driver.findElement(By.id("dropdown"));
             Select options = new Select(dropdown);
 
@@ -72,6 +79,7 @@ public class Day06_DropDown {
         }
 
 
+    //3.Create method selectByValueTest Select Option 1 value by visible text
     @Test
     public void selectByValueTextTest() throws InterruptedException {
 
@@ -87,8 +95,7 @@ public class Day06_DropDown {
 
     }
 
-//4.Create method printAllTest Print all dropdown value
-
+    //4.Create method printAllTest Print all dropdown value
     @Test
     public void printAll() throws InterruptedException {
 

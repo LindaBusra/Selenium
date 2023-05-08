@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.time.Duration;
 
 public class Day03_LocatorsIntro {
@@ -33,11 +35,15 @@ public class Day03_LocatorsIntro {
     @Before
     public void setUp(){
 
-        //user goes to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver= new ChromeDriver(options);
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));      //IMPLICIT WAIT :15 second wait  in case needed
         driver.manage().window().maximize();
+
+        //user goes to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 

@@ -1,9 +1,11 @@
 package Tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.checkerframework.checker.units.qual.C;
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.sql.SQLOutput;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Day02_VerifyTitleTest {
 
@@ -18,9 +20,13 @@ public class Day02_VerifyTitleTest {
 	3.Verify if google title is “Techpro Education | Online It Courses & Bootcamps”
 */
 
-        System.setProperty("webdriver.chrome.driver", "./src/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chromer.driver", "./src/resources/drivers/chromedriver.exe" );
 
-        WebDriver driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriver driver = new ChromeDriver(options);
+
         driver.manage().window().maximize();
 
         driver.get("https://techproeducation.com/");
@@ -31,6 +37,11 @@ public class Day02_VerifyTitleTest {
         String expectedTitle = "Techpro Education | Online It Courses & Bootcamps";
 
 
+        Assert.assertEquals(expectedTitle, actualTitle);
+        System.out.println("test passed");
+
+
+        //or
         if(actualTitle.equals(expectedTitle))  {
             System.out.println("Test passed");
         } else {

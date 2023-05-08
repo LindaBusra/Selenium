@@ -22,8 +22,6 @@ public class Day05_JavaFaker {
 
 
 
-
-
     @Test
     public void javaFakerTest(){
 
