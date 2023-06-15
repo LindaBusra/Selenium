@@ -77,8 +77,8 @@ public class Day04_xpath_css {
 
             -Relative xpath:we don't start from parent and go to child by one by. We go straight to the element.
             -Relative xpath use //
-            -Relative xpath is very reliable. It does not easy brake, because absolute xpath does not dependent on other element
-            -I use relative xpath in my framework when to locate the elements.
+            -Relative xpath is very reliable. It does not easy brake, because relative xpath does not dependent on other element
+            -I use relative xpath in my framework when I locate the elements.
 
 
      * What is the difference between xpath and css selector?

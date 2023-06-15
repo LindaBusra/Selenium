@@ -49,7 +49,7 @@ public class Day05_dynamic_xpath {
 
 //        Verify if "Username : Admin" is text is displayed on the page
         //2. XPATH = //*[text()='Text of the element']
-        WebElement usernameText1 = driver.findElement(By.xpath("//*[text()='Username : Admin']"));      ////accepts full text
+        WebElement usernameText1 = driver.findElement(By.xpath("//*[text()='Username : Admin']"));      //accepts full text
         Assert.assertTrue(usernameText1.isDisplayed());//Password : admin123
 
 

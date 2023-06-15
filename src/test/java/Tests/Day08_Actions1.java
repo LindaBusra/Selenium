@@ -31,6 +31,7 @@ Then accept the alert
         WebElement box = driver.findElement(By.id("hot-spot"));
         actions.contextClick(box).perform();              // choose ContextClick --> (Webelement, target)
 
+
         //Then verify the alert message is "You selected a context menu"
         String actualAlertText = driver.switchTo().alert().getText();
         Assert.assertEquals("You selected a context menu",actualAlertText);

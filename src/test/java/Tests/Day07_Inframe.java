@@ -11,7 +11,7 @@ import java.util.List;
 public class Day07_Inframe extends TestBase {
 
     /*
-     Inframe is an element that loads another HTML element inside of a web page
+     Iframe is an element that loads another HTML element inside of a web page
 • Iframe is used to embed a new map, video, page on a page. It kind of creates a page within a page
 • Selenium cannot directly see the elements inside an iframe if there is an iframe on a page.
 ◦ When there is an iframe, we must first switch() to the iframe
