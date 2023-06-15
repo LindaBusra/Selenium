@@ -20,7 +20,7 @@ public class Day02_VerifyTitleTest {
 	3.Verify if google title is “Techpro Education | Online It Courses & Bootcamps”
 */
 
-        System.setProperty("webdriver.chromer.driver", "./src/resources/drivers/chromedriver.exe" );
+        System.setProperty("webdriver.chrome.driver", "./src/resources/drivers/chromedriver.exe" );
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
