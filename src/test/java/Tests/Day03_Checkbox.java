@@ -44,7 +44,6 @@ Then verify that checkbox1 is checked.
         //Go to https://testcenter.techproeducation.com/index.php?page=checkboxes
         driver.get("https://testcenter.techproeducation.com/index.php?page=checkboxes");
 
-        //
     }
 
 
