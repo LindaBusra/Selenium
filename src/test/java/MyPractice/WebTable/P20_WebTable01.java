@@ -42,8 +42,7 @@ public class P20_WebTable01 extends TestBase {
 
         // 4.satirdaki(row) elementleri konsolda yazdırın.
         List<WebElement> cellList = driver.findElements(By.xpath("//tbody//tr[4]//td"));
-        for (WebElement each : cellList
-        ) {
+        for (WebElement each : cellList ) {
             System.out.println(each.getText());
         }
 
