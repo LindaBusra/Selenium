@@ -1,6 +1,5 @@
 package Tests;
 
-import org.openqa.selenium.devtools.v106.domsnapshot.model.StringIndex;
 
 public class Day07_Windows {
 
