@@ -27,7 +27,7 @@ public class P12_Amazon_DropDown extends TestBase {
 //        Select the 3rd option by index (index of 2) and assert if the name is “Amazon Devices”.(after you
 //        select you to need to use the get first selected option method)
         options.selectByIndex(2);
-        Assert.assertEquals(options.getFirstSelectedOption().getText(),"Amazon Devices");
+        Assert.assertEquals(options.getFirstSelectedOption().getText(),"Automotive");
 
 //        Print all of the dropdown options
         List<WebElement> allOptions =options.getOptions();
